@@ -1,6 +1,19 @@
-<h1>{{ question.question_text }}</h1>
-<ul>
-{% for choice in question.choice_set.all %}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>DJANGOGOGOGOGOGOGO</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+</head>
+<body>
+    <h1>{{ question.question_text }}</h1>
+    <ul>
+    {% for choice in question.choice_set.all %}
     <li>{{ choice.choice_text }}</li>
-{% endfor %}
-</ul>
+    {% endfor %}
+    </ul>
+
+</body>
+</html>

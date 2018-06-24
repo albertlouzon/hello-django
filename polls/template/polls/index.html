@@ -1,10 +1,22 @@
-{% if latest_question_list %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>DJANGOGOGOGOGOGOGO</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+</head>
+<body>
+    {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
        <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
         <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
     {% endfor %}
     </ul>
-{% else %}
+    {% else %}
     <p>No polls are available.</p>
-{% endif %}
+    {% endif %}
+
+</body>
+</html>
